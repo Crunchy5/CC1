@@ -76,8 +76,15 @@ export function analyseThrowsOfDice([throw1dice1, throw1dice2, throw1dice3, thro
         
     }
 
+    if((serie1 == 5) && (amountOfEachThrow1[0] == 0)){
+        result1 = 40;
+    }
     if((serie1 == 5) && (amountOfEachThrow1[5] == 0)){
         result1 = 40;
+    }
+
+    if((serie2 == 5) && (amountOfEachThrow2[0] == 0)){
+        result2 = 40;
     }
     if((serie2 == 5) && (amountOfEachThrow2[5] == 0)){
         result2 = 40;
