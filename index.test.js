@@ -23,4 +23,16 @@ describe("Analyse dice throws", () => {
         expect(analyseThrowsOfDice([1, 3, 2, 2, 2], [1, 1, 2, 2, 2])).toBe(58);
     });
 
+    it("serie", () => {
+        expect(analyseThrowsOfDice([1, 3, 2, 4, 5], [1, 3, 2, 4, 5])).toBe(80);
+    });
+
+    it("chance", () => {
+        expect(analyseThrowsOfDice([1, 3, 3, 4, 5], [1, 3, 3, 4, 5])).toBe(32);
+    });
+
+    it("full and chance", () => {
+        expect(analyseThrowsOfDice([3, 3, 3, 5, 5], [1, 3, 4, 4, 5])).toBe(47);
+    });
+
 });
