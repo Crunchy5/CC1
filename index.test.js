@@ -8,7 +8,19 @@ describe("Analyse dice throws", () => {
     });
 
     it("same number four times", () => {
-        expect(analyseThrowsOfDice([1, 1, 1, 1, 2], [1, 1, 1, 1, 2])).toBe(80);
+        expect(analyseThrowsOfDice([1, 1, 1, 1, 2], [1, 1, 1, 1, 2])).toBe(70);
+    });
+
+    it("only full", () => {
+        expect(analyseThrowsOfDice([1, 1, 2, 2, 2], [1, 1, 2, 2, 2])).toBe(60);
+    });
+
+    it("only brelan", () => {
+        expect(analyseThrowsOfDice([1, 3, 2, 2, 2], [1, 3, 2, 2, 2])).toBe(56);
+    });
+
+    it("one brelan and one full", () => {
+        expect(analyseThrowsOfDice([1, 3, 2, 2, 2], [1, 1, 2, 2, 2])).toBe(58);
     });
 
 });
